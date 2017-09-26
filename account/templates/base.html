@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+</heady>
+
+<body>
+
+<div id="container">
+
+    <div id="header">
+        
+        <ul class="topnav">
+        {% if request.user.is_authenticated %}
+            <li {% if section == "dashboard" %}class="selected"{% endif %}>
+                <a href="{% url "dashboard" %}">My Dashboard</a>
+            </li>
+        {% endif %}
+        
+        {% if request.user.is_authenticated %}
+             <li class="right">
+                <a href="{% url "logout" %}">Log out <span style="color: #0fe;">{{ request.user.first_name }}</span></a>
+             </li>
+        {% else %}
+            <li class="right">
+                <a href="{% url "login" %}">Log in</a>
+            </li>
+            <li class="right">
+                <a href="{% url "register" %}">Sign up</a>
+            </li>
+        {% endif %}
+        
+        </ul>
+        
+    </div>
+        
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message|safe }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+</body>    
+</html>

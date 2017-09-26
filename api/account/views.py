@@ -4,6 +4,7 @@ from rest_framework import status
 from rest_framework.decorators import detail_route, list_route
 
 from django.conf import settings
+from django.contrib.auth.models import User
 
 from account.models import Profile
 

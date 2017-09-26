@@ -26,7 +26,7 @@ class TodoTests(APITestCase):
         data = {"status" : True}
         response = self.client.patch(url, data, format='json')
 
-        url = "/api/todo/1/undone/"
+        url = reverse('todo_rest-list')+"1/undone/"
         response = self.client.get(url)
         self.assertEqual(Todo.objects.get().status, False)
         self.assertNotEqual(Todo.objects.get().status, True)

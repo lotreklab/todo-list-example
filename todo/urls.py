@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^api/', include('todolist.urls')),
+    url(r'^{0}/'.format(getattr(settings, 'ADMIN_URL', 'admin')), admin.site.urls),
+    url(r'^{0}/'.format(getattr(settings, 'API_URL', 'api')), include('todolist.urls')),
 ]

@@ -6,7 +6,7 @@ from todolist.models import Todo
 class TodoTests(APITestCase):
 
     def setUp(self):
-        url = "/api/todo/"
+        url = reverse('todo_rest-list')
         data = { "title" : "Todo Placeholder",
                  "text"  : "Lorem ipsum dolor sit amet"
                 }
@@ -14,7 +14,7 @@ class TodoTests(APITestCase):
 
 
     def test_todo_doned(self):
-        url = "/api/todo/1/done/"
+        url = reverse('todo_rest-list')+"1/done/"
         response = self.client.get(url)
         self.assertEqual(Todo.objects.get().status, True)
         self.assertNotEqual(Todo.objects.get().status, False)
@@ -22,7 +22,7 @@ class TodoTests(APITestCase):
 
 
     def test_todo_undoned(self):
-        url = "/api/todo/1/"
+        url = reverse('todo_rest-list')+"1/"
         data = {"status" : True}
         response = self.client.patch(url, data, format='json')
 

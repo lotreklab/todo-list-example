@@ -17,5 +17,5 @@ class Todo(models.Model):
     start_date = models.DateTimeField(auto_now_add=True)
     end_date = models.DateTimeField(null=True, blank=True)
     status = models.BooleanField(default=False)
-    attachments = models.ForeignKey(Media)
-    users = models.ForeignKey(User)
+    attachments = models.ForeignKey(Media, null=True, blank=True)
+    users = models.ForeignKey(User, null=True, blank=True)

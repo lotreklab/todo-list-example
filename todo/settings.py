@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -101,6 +102,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+# User authentication urls
+
+LOGIN_REDIRECT_URL = reverse_lazy('dashboard') # URL to redirect after login if contrib.auth.views.login gets no next parameter
+LOGIN_URL = reverse_lazy('login') # URL to redirect the user to log in
+LOGOUT_URL = reverse_lazy('logout') # URL to redirect the user to log out
 
 
 # Internationalization

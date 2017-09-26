@@ -1,0 +1,172 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body {
+    background: #ffffff;
+    font: 14px Helvetica, Arial, sans-serif;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ul li {
+    margin: 4px 0px 4px 0px;
+}
+
+ul ul {
+    list-style-type: disc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 30px; 
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 12px;
+}
+
+a, a:visited {
+	color: #00686f;
+	text-decoration: none;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+a:hover, a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+
+p {
+    margin: 8px 0px 16px 0px;
+	margin-bottom: 15px;
+    line-height: 150%;
+}
+
+code {
+	font-family: Courier, "Courier New", Monaco, Tahoma;
+	background: #eee;
+	color: #333;
+	padding: 0px 2px;
+}
+
+pre {
+	background: #eee;
+	padding: 20px;
+	margin-bottom: 1em;
+	overflow: auto;
+}
+
+blockquote {
+	font-style: italic;
+	margin: 0 0 1em 15px;
+	padding-left: 10px;
+	border-left: 5px solid #dddddd;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th {
+    padding: 8px 15px 8px 15px;
+    background-color: #f6f6f6;
+    color: #666;
+    text-align: left;
+    font-weight: bold;
+    font-size: 13px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+td {
+    text-align: left;
+    padding: 6px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+#container {
+    width: 80%;
+}
+
+#header {
+    background-color: #fafafa;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+#content {
+    padding: 30px;
+}
+
+#footer {
+    padding: 30px;
+	font-size: 13px;
+    font-style: italic;
+    text-align: center;
+    background: transparent;
+    color: #eee;
+    clear: both;
+}

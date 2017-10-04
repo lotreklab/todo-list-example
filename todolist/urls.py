@@ -7,4 +7,5 @@ router.register(r'todo', TodoViewSet, 'todo_rest')
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^$', views.home, name='home'),
 ]

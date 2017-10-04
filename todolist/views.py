@@ -47,8 +47,3 @@ class TodoViewSet(viewsets.ModelViewSet):
             pass
         return self.default_return_todo()
 
-
-# Create your views here.
-
-def home(request):
-    return render(request,'todolist/index.html',{})

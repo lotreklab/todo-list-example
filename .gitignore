@@ -27,3 +27,4 @@ error_logs.log
 # Sockets
 *.socket
 *.json
+ghostdriver.log

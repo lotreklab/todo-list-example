@@ -19,10 +19,10 @@ from django.conf import settings
 
 from website import views
 
-
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^{0}/'.format(getattr(settings, 'ADMIN_URL', 'admin')), admin.site.urls),
-    url(r'^{0}/'.format(getattr(settings, 'API_URL', 'api')), 
-    include('todolist.urls')),
+    url(r'^{0}/'.format(getattr(settings, 'ADMIN_URL', 'admin')),
+        admin.site.urls),
+    url(r'^{0}/'.format(getattr(settings, 'API_URL', 'api')),
+        include('todolist.urls')),
 ]

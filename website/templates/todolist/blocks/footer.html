@@ -1,0 +1,15 @@
+<footer>
+    <h4>&copy; 2017 - Lotrèk</h4>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $.ajax({
+        url: "/api/todo/",
+        context: document.body
+    }).done(function (result) {
+        for (var i = 0; i < result.length; i++) {
+            $("#todo-list").append('<li>' + result[i].title + '</li>');
+        }
+    });
+
+</script>

@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
 
 def home(request):
-    return render(request,'todolist/index.html',{})
+    return render(request, 'todolist/pages/index.html', {})
